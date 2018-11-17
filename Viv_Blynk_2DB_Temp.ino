@@ -13,7 +13,7 @@
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
-char auth[] = "1a133371bf9a44bc8be9e053babd5248"; //Put your Auth Token in the Blynk App here
+char auth[] = "authcode"; //Put your Auth Token in the Blynk App here
 
 SimpleTimer timer;
 
@@ -25,7 +25,7 @@ float s2;
 void setup()
 {
  Serial.begin(9600);
- Blynk.begin(auth, "ParentNet", "florence33"); //insert here your SSID and password
+ Blynk.begin(auth, "SSID", "PW"); //insert here your SSID and password
  sensors.begin();
  sensors.setResolution(10); 	//More on resolution: http://www.homautomation.org/2015/11/17/ds18b20-how-to-change-resolution-9101112-bits/
 // timer.setInterval(3000, readTemp);   //Data reading interval
